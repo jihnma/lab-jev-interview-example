@@ -1,0 +1,1807 @@
+{
+ "rule": "python3 experiment/make_candidates.py    # writes experiment/spec.json",
+ "order": [
+  "c001",
+  "c002",
+  "c003",
+  "c004",
+  "c005",
+  "c006",
+  "c007",
+  "c008",
+  "c009",
+  "c010",
+  "c011",
+  "c012",
+  "c013",
+  "c014",
+  "c015",
+  "c016",
+  "c017",
+  "c018",
+  "c019",
+  "c020",
+  "c021",
+  "c022",
+  "c023",
+  "c024",
+  "c025",
+  "c026",
+  "c027",
+  "c028",
+  "c029",
+  "c030",
+  "c031",
+  "c032",
+  "c033",
+  "c034",
+  "c035",
+  "c036",
+  "c037",
+  "c038",
+  "c039",
+  "c040",
+  "c041",
+  "c042",
+  "c043",
+  "c044",
+  "c045",
+  "c046",
+  "c047",
+  "c048",
+  "c049",
+  "c050",
+  "c051",
+  "c052",
+  "c053",
+  "c054",
+  "c055",
+  "c056",
+  "c057",
+  "c058",
+  "c059",
+  "c060",
+  "c061",
+  "c062",
+  "c063",
+  "c064",
+  "c065",
+  "c066",
+  "c067",
+  "c068",
+  "c069",
+  "c070",
+  "c071",
+  "c072",
+  "c073",
+  "c074",
+  "c075",
+  "c076",
+  "c077",
+  "c078",
+  "c079",
+  "c080",
+  "c081",
+  "c082",
+  "c083",
+  "c084",
+  "c085",
+  "c086",
+  "c087",
+  "c088",
+  "c089",
+  "c090",
+  "c091",
+  "c092",
+  "c093",
+  "c094",
+  "c095",
+  "c096",
+  "c097",
+  "c098",
+  "c099",
+  "c100"
+ ],
+ "candidates": [
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c001",
+   "lang": "en",
+   "label": "hire",
+   "background": "a hotel booking payments team",
+   "years_backend": 10
+  },
+  {
+   "type": "persuasive_unsupported",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "persuasive_unsupported",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c002",
+   "lang": "ja",
+   "label": "reject",
+   "background": "決済代行会社のバックエンド",
+   "years_backend": 2
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c003",
+   "lang": "ja",
+   "label": "reject",
+   "background": "コンビニ系電子マネーの加盟店精算",
+   "years_backend": 2
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "unilateral_rewrite",
+    "mixed": null
+   },
+   "id": "c004",
+   "lang": "ja",
+   "label": "reject",
+   "background": "証券会社の約定システム",
+   "years_backend": 12
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "none",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c005",
+   "lang": "en",
+   "label": "reject",
+   "background": "a ride-hailing company's wallet team",
+   "years_backend": 3
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c006",
+   "lang": "ja",
+   "label": "borderline",
+   "background": "通信キャリアの料金計算システム",
+   "years_backend": 7
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c007",
+   "lang": "ja",
+   "label": "hire",
+   "background": "大手銀行のシステム子会社で勘定系のJava開発",
+   "years_backend": 8
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c008",
+   "lang": "ja",
+   "label": "hire",
+   "background": "決済代行会社のバックエンド",
+   "years_backend": 15
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c009",
+   "lang": "ja",
+   "label": "hire",
+   "background": "大手銀行のシステム子会社で勘定系のJava開発",
+   "years_backend": 4
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "mixed",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": "skipped a deploy step in a real emergency and announced it afterwards"
+   },
+   "id": "c010",
+   "lang": "en",
+   "label": "borderline",
+   "background": "an insurance claims platform",
+   "years_backend": 5
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "production",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "verbose",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c011",
+   "lang": "en",
+   "label": "hire",
+   "background": "a neobank in Berlin",
+   "years_backend": 8
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c012",
+   "lang": "en",
+   "label": "hire",
+   "background": "a public-sector tax system",
+   "years_backend": 7
+  },
+  {
+   "type": "vague",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "vague",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c013",
+   "lang": "en",
+   "label": "reject",
+   "background": "a payments processor in Singapore",
+   "years_backend": 1
+  },
+  {
+   "type": "impressive_irrelevant",
+   "facts": {
+    "java": "none",
+    "rust": "none",
+    "money": "none",
+    "principles": "aligned",
+    "style": "irrelevant_drift",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c014",
+   "lang": "en",
+   "label": "reject",
+   "background": "embedded firmware engineer in C",
+   "years_backend": 0
+  },
+  {
+   "type": "java_to_rust_potential",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c015",
+   "lang": "en",
+   "label": "hire",
+   "background": "a marketplace settlement team in London",
+   "years_backend": 10
+  },
+  {
+   "type": "vague",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "vague",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c016",
+   "lang": "ja",
+   "label": "reject",
+   "background": "保険会社の契約管理システム",
+   "years_backend": 3
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c017",
+   "lang": "ja",
+   "label": "hire",
+   "background": "ゲーム会社の課金・アイテム管理",
+   "years_backend": 7
+  },
+  {
+   "type": "persuasive_unsupported",
+   "facts": {
+    "java": "thin",
+    "rust": "hobby",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "persuasive_unsupported",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c018",
+   "lang": "ja",
+   "label": "reject",
+   "background": "保険会社の契約管理システム",
+   "years_backend": 3
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "deep",
+    "rust": "production",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "unilateral_rewrite",
+    "mixed": null
+   },
+   "id": "c019",
+   "lang": "en",
+   "label": "reject",
+   "background": "a remittance startup",
+   "years_backend": 15
+  },
+  {
+   "type": "persuasive_unsupported",
+   "facts": {
+    "java": "thin",
+    "rust": "hobby",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "persuasive_unsupported",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c020",
+   "lang": "ja",
+   "label": "reject",
+   "background": "証券会社の約定システム",
+   "years_backend": 3
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "oncall_beneath",
+    "mixed": null
+   },
+   "id": "c021",
+   "lang": "ja",
+   "label": "reject",
+   "background": "証券会社の約定システム",
+   "years_backend": 7
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c022",
+   "lang": "ja",
+   "label": "hire",
+   "background": "通信キャリアの料金計算システム",
+   "years_backend": 5
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "production",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "verbose",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c023",
+   "lang": "ja",
+   "label": "hire",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 10
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "production",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "verbose",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c024",
+   "lang": "en",
+   "label": "hire",
+   "background": "a public-sector tax system",
+   "years_backend": 10
+  },
+  {
+   "type": "java_to_rust_potential",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c025",
+   "lang": "en",
+   "label": "hire",
+   "background": "a ride-hailing company's wallet team",
+   "years_backend": 10
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c026",
+   "lang": "ja",
+   "label": "borderline",
+   "background": "決済代行会社のバックエンド",
+   "years_backend": 4
+  },
+  {
+   "type": "weak_both",
+   "facts": {
+    "java": "none",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "mixed",
+    "style": "vague",
+    "conflict": null,
+    "mixed": "skipped a deploy step in a real emergency and announced it afterwards"
+   },
+   "id": "c027",
+   "lang": "ja",
+   "label": "reject",
+   "background": "SaaSスタートアップの課金基盤",
+   "years_backend": 0
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "skips_review",
+    "mixed": null
+   },
+   "id": "c028",
+   "lang": "ja",
+   "label": "reject",
+   "background": "SaaSスタートアップの課金基盤",
+   "years_backend": 7
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c029",
+   "lang": "en",
+   "label": "hire",
+   "background": "a public-sector tax system",
+   "years_backend": 6
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "mixed",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": "skipped a deploy step in a real emergency and announced it afterwards"
+   },
+   "id": "c030",
+   "lang": "ja",
+   "label": "borderline",
+   "background": "通信キャリアの料金計算システム",
+   "years_backend": 7
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c031",
+   "lang": "ja",
+   "label": "hire",
+   "background": "大手銀行のシステム子会社で勘定系のJava開発",
+   "years_backend": 10
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c032",
+   "lang": "ja",
+   "label": "hire",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 4
+  },
+  {
+   "type": "persuasive_unsupported",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "persuasive_unsupported",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c033",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 1
+  },
+  {
+   "type": "rust_engineer",
+   "facts": {
+    "java": "solid",
+    "rust": "production",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c034",
+   "lang": "en",
+   "label": "hire",
+   "background": "a public-sector tax system",
+   "years_backend": 7
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "prod_data_testing",
+    "mixed": null
+   },
+   "id": "c035",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ゲーム会社の課金・アイテム管理",
+   "years_backend": 12
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "none",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c036",
+   "lang": "en",
+   "label": "reject",
+   "background": "a ride-hailing company's wallet team",
+   "years_backend": 3
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c037",
+   "lang": "ja",
+   "label": "hire",
+   "background": "SaaSスタートアップの課金基盤",
+   "years_backend": 10
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "production",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "verbose",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c038",
+   "lang": "ja",
+   "label": "hire",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 12
+  },
+  {
+   "type": "vague",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "vague",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c039",
+   "lang": "ja",
+   "label": "reject",
+   "background": "大手銀行のシステム子会社で勘定系のJava開発",
+   "years_backend": 2
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "deep",
+    "rust": "production",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "hid_incident",
+    "mixed": null
+   },
+   "id": "c040",
+   "lang": "ja",
+   "label": "reject",
+   "background": "証券会社の約定システム",
+   "years_backend": 8
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c041",
+   "lang": "ja",
+   "label": "borderline",
+   "background": "ゲーム会社の課金・アイテム管理",
+   "years_backend": 7
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "prod_data_testing",
+    "mixed": null
+   },
+   "id": "c042",
+   "lang": "en",
+   "label": "reject",
+   "background": "a ride-hailing company's wallet team",
+   "years_backend": 6
+  },
+  {
+   "type": "impressive_irrelevant",
+   "facts": {
+    "java": "thin",
+    "rust": "hobby",
+    "money": "none",
+    "principles": "aligned",
+    "style": "irrelevant_drift",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c043",
+   "lang": "ja",
+   "label": "reject",
+   "background": "machine-learning researcher in Python",
+   "years_backend": 1
+  },
+  {
+   "type": "vague",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "vague",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c044",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 1
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c045",
+   "lang": "en",
+   "label": "reject",
+   "background": "an enterprise ERP vendor",
+   "years_backend": 3
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c046",
+   "lang": "en",
+   "label": "hire",
+   "background": "a crypto exchange's ledger team",
+   "years_backend": 6
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c047",
+   "lang": "en",
+   "label": "reject",
+   "background": "an insurance claims platform",
+   "years_backend": 2
+  },
+  {
+   "type": "weak_both",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "none",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "skips_review",
+    "mixed": null
+   },
+   "id": "c048",
+   "lang": "ja",
+   "label": "reject",
+   "background": "決済代行会社のバックエンド",
+   "years_backend": 3
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "mixed",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": "argued a rewrite hard, then accepted the team's no"
+   },
+   "id": "c049",
+   "lang": "ja",
+   "label": "borderline",
+   "background": "大手銀行のシステム子会社で勘定系のJava開発",
+   "years_backend": 6
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "skips_review",
+    "mixed": null
+   },
+   "id": "c050",
+   "lang": "ja",
+   "label": "reject",
+   "background": "保険会社の契約管理システム",
+   "years_backend": 10
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c051",
+   "lang": "en",
+   "label": "hire",
+   "background": "a public-sector tax system",
+   "years_backend": 6
+  },
+  {
+   "type": "java_to_rust_potential",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c052",
+   "lang": "en",
+   "label": "hire",
+   "background": "a marketplace settlement team in London",
+   "years_backend": 15
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "none",
+    "rust": "learning",
+    "money": "none",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c053",
+   "lang": "en",
+   "label": "reject",
+   "background": "an enterprise ERP vendor",
+   "years_backend": 1
+  },
+  {
+   "type": "java_to_rust_potential",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c054",
+   "lang": "ja",
+   "label": "hire",
+   "background": "保険会社の契約管理システム",
+   "years_backend": 8
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "none",
+    "rust": "learning",
+    "money": "none",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c055",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 1
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "none",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c056",
+   "lang": "en",
+   "label": "reject",
+   "background": "a marketplace settlement team in London",
+   "years_backend": 3
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c057",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ゲーム会社の課金・アイテム管理",
+   "years_backend": 3
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "deep",
+    "rust": "production",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "oncall_beneath",
+    "mixed": null
+   },
+   "id": "c058",
+   "lang": "ja",
+   "label": "reject",
+   "background": "物流会社の配送管理",
+   "years_backend": 8
+  },
+  {
+   "type": "weak_both",
+   "facts": {
+    "java": "none",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "mixed",
+    "style": "vague",
+    "conflict": null,
+    "mixed": "argued a rewrite hard, then accepted the team's no"
+   },
+   "id": "c059",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ゲーム会社の課金・アイテム管理",
+   "years_backend": 1
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "hid_incident",
+    "mixed": null
+   },
+   "id": "c060",
+   "lang": "ja",
+   "label": "reject",
+   "background": "コンビニ系電子マネーの加盟店精算",
+   "years_backend": 7
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "oncall_beneath",
+    "mixed": null
+   },
+   "id": "c061",
+   "lang": "en",
+   "label": "reject",
+   "background": "a marketplace settlement team in London",
+   "years_backend": 4
+  },
+  {
+   "type": "weak_both",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "none",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "oncall_beneath",
+    "mixed": null
+   },
+   "id": "c062",
+   "lang": "en",
+   "label": "reject",
+   "background": "a ride-hailing company's wallet team",
+   "years_backend": 3
+  },
+  {
+   "type": "java_to_rust_potential",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c063",
+   "lang": "ja",
+   "label": "hire",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 12
+  },
+  {
+   "type": "java_to_rust_potential",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c064",
+   "lang": "en",
+   "label": "hire",
+   "background": "a ride-hailing company's wallet team",
+   "years_backend": 8
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "mixed",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": "skipped a deploy step in a real emergency and announced it afterwards"
+   },
+   "id": "c065",
+   "lang": "ja",
+   "label": "borderline",
+   "background": "コンビニ系電子マネーの加盟店精算",
+   "years_backend": 4
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "mixed",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": "argued a rewrite hard, then accepted the team's no"
+   },
+   "id": "c066",
+   "lang": "ja",
+   "label": "borderline",
+   "background": "大手銀行のシステム子会社で勘定系のJava開発",
+   "years_backend": 4
+  },
+  {
+   "type": "rust_engineer",
+   "facts": {
+    "java": "thin",
+    "rust": "production",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c067",
+   "lang": "en",
+   "label": "reject",
+   "background": "a telecom billing system",
+   "years_backend": 3
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c068",
+   "lang": "ja",
+   "label": "reject",
+   "background": "証券会社の約定システム",
+   "years_backend": 3
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "skips_review",
+    "mixed": null
+   },
+   "id": "c069",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ゲーム会社の課金・アイテム管理",
+   "years_backend": 6
+  },
+  {
+   "type": "impressive_irrelevant",
+   "facts": {
+    "java": "thin",
+    "rust": "hobby",
+    "money": "none",
+    "principles": "aligned",
+    "style": "irrelevant_drift",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c070",
+   "lang": "en",
+   "label": "reject",
+   "background": "data-platform engineer in Scala/Spark",
+   "years_backend": 1
+  },
+  {
+   "type": "vague",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "vague",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c071",
+   "lang": "ja",
+   "label": "reject",
+   "background": "通信キャリアの料金計算システム",
+   "years_backend": 3
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c072",
+   "lang": "en",
+   "label": "borderline",
+   "background": "a neobank in Berlin",
+   "years_backend": 5
+  },
+  {
+   "type": "rust_engineer",
+   "facts": {
+    "java": "solid",
+    "rust": "production",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c073",
+   "lang": "ja",
+   "label": "hire",
+   "background": "決済代行会社のバックエンド",
+   "years_backend": 5
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "hid_incident",
+    "mixed": null
+   },
+   "id": "c074",
+   "lang": "ja",
+   "label": "reject",
+   "background": "通信キャリアの料金計算システム",
+   "years_backend": 12
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "production",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "verbose",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c075",
+   "lang": "ja",
+   "label": "hire",
+   "background": "大手銀行のシステム子会社で勘定系のJava開発",
+   "years_backend": 10
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c076",
+   "lang": "ja",
+   "label": "hire",
+   "background": "証券会社の約定システム",
+   "years_backend": 5
+  },
+  {
+   "type": "weak_both",
+   "facts": {
+    "java": "none",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "mixed",
+    "style": "vague",
+    "conflict": null,
+    "mixed": "argued a rewrite hard, then accepted the team's no"
+   },
+   "id": "c077",
+   "lang": "ja",
+   "label": "reject",
+   "background": "物流会社の配送管理",
+   "years_backend": 0
+  },
+  {
+   "type": "vague",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "vague",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c078",
+   "lang": "en",
+   "label": "reject",
+   "background": "an ad-tech bidding platform",
+   "years_backend": 3
+  },
+  {
+   "type": "weak_both",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "none",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "hid_incident",
+    "mixed": null
+   },
+   "id": "c079",
+   "lang": "ja",
+   "label": "reject",
+   "background": "受託開発会社で複数の業務システム",
+   "years_backend": 1
+  },
+  {
+   "type": "rust_engineer",
+   "facts": {
+    "java": "solid",
+    "rust": "production",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c080",
+   "lang": "en",
+   "label": "hire",
+   "background": "a hotel booking payments team",
+   "years_backend": 4
+  },
+  {
+   "type": "weak_both",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "none",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "prod_data_testing",
+    "mixed": null
+   },
+   "id": "c081",
+   "lang": "ja",
+   "label": "reject",
+   "background": "物流会社の配送管理",
+   "years_backend": 3
+  },
+  {
+   "type": "impressive_irrelevant",
+   "facts": {
+    "java": "thin",
+    "rust": "hobby",
+    "money": "none",
+    "principles": "aligned",
+    "style": "irrelevant_drift",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c082",
+   "lang": "ja",
+   "label": "reject",
+   "background": "data-platform engineer in Scala/Spark",
+   "years_backend": 1
+  },
+  {
+   "type": "impressive_irrelevant",
+   "facts": {
+    "java": "none",
+    "rust": "none",
+    "money": "none",
+    "principles": "aligned",
+    "style": "irrelevant_drift",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c083",
+   "lang": "en",
+   "label": "reject",
+   "background": "front-end architect in TypeScript",
+   "years_backend": 0
+  },
+  {
+   "type": "persuasive_unsupported",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "persuasive_unsupported",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c084",
+   "lang": "ja",
+   "label": "reject",
+   "background": "受託開発会社で複数の業務システム",
+   "years_backend": 3
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "none",
+    "rust": "learning",
+    "money": "none",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c085",
+   "lang": "en",
+   "label": "reject",
+   "background": "an enterprise ERP vendor",
+   "years_backend": 1
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c086",
+   "lang": "ja",
+   "label": "hire",
+   "background": "物流会社の配送管理",
+   "years_backend": 15
+  },
+  {
+   "type": "java_to_rust_potential",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c087",
+   "lang": "ja",
+   "label": "hire",
+   "background": "決済代行会社のバックエンド",
+   "years_backend": 12
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c088",
+   "lang": "en",
+   "label": "hire",
+   "background": "a marketplace settlement team in London",
+   "years_backend": 7
+  },
+  {
+   "type": "rust_engineer",
+   "facts": {
+    "java": "thin",
+    "rust": "production",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c089",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ECモールの注文・決済基盤",
+   "years_backend": 2
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c090",
+   "lang": "en",
+   "label": "reject",
+   "background": "an insurance claims platform",
+   "years_backend": 1
+  },
+  {
+   "type": "impressive_irrelevant",
+   "facts": {
+    "java": "none",
+    "rust": "none",
+    "money": "none",
+    "principles": "aligned",
+    "style": "irrelevant_drift",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c091",
+   "lang": "en",
+   "label": "reject",
+   "background": "machine-learning researcher in Python",
+   "years_backend": 0
+  },
+  {
+   "type": "strong_tech_weak_culture",
+   "facts": {
+    "java": "solid",
+    "rust": "none",
+    "money": "lived",
+    "principles": "conflict",
+    "style": "concrete",
+    "conflict": "unilateral_rewrite",
+    "mixed": null
+   },
+   "id": "c092",
+   "lang": "en",
+   "label": "reject",
+   "background": "a neobank in Berlin",
+   "years_backend": 5
+  },
+  {
+   "type": "weak_both",
+   "facts": {
+    "java": "none",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "mixed",
+    "style": "vague",
+    "conflict": null,
+    "mixed": "skipped a deploy step in a real emergency and announced it afterwards"
+   },
+   "id": "c093",
+   "lang": "en",
+   "label": "reject",
+   "background": "a public-sector tax system",
+   "years_backend": 1
+  },
+  {
+   "type": "strong_both",
+   "facts": {
+    "java": "solid",
+    "rust": "hobby",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c094",
+   "lang": "ja",
+   "label": "hire",
+   "background": "保険会社の契約管理システム",
+   "years_backend": 4
+  },
+  {
+   "type": "rust_engineer",
+   "facts": {
+    "java": "thin",
+    "rust": "production",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c095",
+   "lang": "en",
+   "label": "reject",
+   "background": "an enterprise ERP vendor",
+   "years_backend": 1
+  },
+  {
+   "type": "persuasive_unsupported",
+   "facts": {
+    "java": "thin",
+    "rust": "hobby",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "persuasive_unsupported",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c096",
+   "lang": "ja",
+   "label": "reject",
+   "background": "コンビニ系電子マネーの加盟店精算",
+   "years_backend": 3
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "learning",
+    "money": "none",
+    "principles": "aligned",
+    "style": "terse",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c097",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 2
+  },
+  {
+   "type": "borderline",
+   "facts": {
+    "java": "solid",
+    "rust": "learning",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c098",
+   "lang": "en",
+   "label": "borderline",
+   "background": "a telecom billing system",
+   "years_backend": 7
+  },
+  {
+   "type": "java_to_rust_potential",
+   "facts": {
+    "java": "deep",
+    "rust": "learning",
+    "money": "lived",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c099",
+   "lang": "en",
+   "label": "hire",
+   "background": "a remittance startup",
+   "years_backend": 10
+  },
+  {
+   "type": "weak_tech_strong_culture",
+   "facts": {
+    "java": "thin",
+    "rust": "none",
+    "money": "textbook",
+    "principles": "aligned",
+    "style": "concrete",
+    "conflict": null,
+    "mixed": null
+   },
+   "id": "c100",
+   "lang": "ja",
+   "label": "reject",
+   "background": "ポイントサービスの台帳",
+   "years_backend": 1
+  }
+ ]
+}

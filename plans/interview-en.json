@@ -1,0 +1,357 @@
+{
+ "from": "brief.md",
+ "lang": "en",
+ "policy": {
+  "per_dimension": 2,
+  "reserve_early": 1,
+  "min_q": 8,
+  "max_q": 12,
+  "done_threshold": 0.5,
+  "gap_k": 1,
+  "samples": 3,
+  "noise_floor": {
+   "choice": 0.0203,
+   "score": 0.0178
+  },
+  "measurement_boundary": 1.5
+ },
+ "done": {
+  "true": "True when, for all four evaluation dimensions (Java backend practice, Rust readiness, Money correctness and operational judgment, Alignment with how we work), at least two answers grounded in the candidate's own concrete experience have been obtained for each, and answers that leave the candidate's own role unclear behind ‘we did it as a team,’ or that are only general or textbook explanations, do not make up the core of the dimension's evaluation. It may also end when a statement clearly matching one of the conditions that lead to rejection even with strong technical ability (affirming skipping a procedure, affirming hiding something, refusing on-call, a unilateral rewrite, verifying with production data) has come out clearly enough to give sufficient grounds for judgment.",
+  "false": "False while even one evaluation dimension still has no answer, or while the answers obtained don't carry concrete experience (numbers, time frames, failures, grounds for a decision), so that dimension cannot be evaluated. However, once two or more statements matching the conditions that lead to rejection even with strong technical ability have been confirmed, it's fine to end even if the remaining dimensions are unanswered."
+ },
+ "total": "weighted_mean",
+ "tie_break": "cover_first",
+ "coverage": "reserve_debt",
+ "dimensions": [
+  {
+   "name": "Java backend practice",
+   "weight": 0.28,
+   "aggregate": "mean"
+  },
+  {
+   "name": "Rust readiness",
+   "weight": 0.16,
+   "aggregate": "mean"
+  },
+  {
+   "name": "Money correctness and operational judgment",
+   "weight": 0.32,
+   "aggregate": "mean"
+  },
+  {
+   "name": "Alignment with how we work",
+   "weight": 0.24,
+   "aggregate": "mean"
+  }
+ ],
+ "fit": {
+  "rubric": [
+   "There is an irreconcilable gap between how we work and the candidate's experience or attitude. At least one of the following is confirmed in the answers: describing deliberately skipping a procedure without urgency as a good experience, not considering delayed reporting of an incident or mistake to be a problem, stating outright that on-call or mentoring juniors is not their real job, being proud of implementing or rewriting something alone against a team decision, or seeing no problem in using production balances or data for verification.",
+   "The candidate speaks fluently about technical matters, but cannot describe their own concrete actions in response to questions about how we work, and answers only in generalities or ideals. Whether they have relevant experience cannot be determined, so fit with our principles cannot be assessed.",
+   "The candidate is broadly aligned with most of the working principles, but shows a conditional attitude in some areas — for example, saying something to the effect of ‘in an emergency, you should fix it first even if it means skipping the procedure,’ without committing to announcing and recording that skip, or not speaking positively about on-call or support work. They could work here, but some coaching would be needed to bring them fully in line with the principles.",
+   "Considering what it would be like for this person to work here, they can be judged as someone who would act in line with all of our working principles (argue with evidence, then follow the decision; do not hide; money is not a test environment; operations and support are equal work; decide the boundary before you rewrite). Throughout the candidate's account of their experience, they consistently show a stance of sharing incidents and mistakes without hiding them, treating on-call, support, and mentoring juniors as their own job, never skipping review and deployment procedures even in an emergency, and carrying out migrations based on measurement and agreement while respecting the team's decisions."
+  ]
+ },
+ "questions": [
+  {
+   "id": "java_tx_design",
+   "dimension": "Java backend practice",
+   "text": "Tell me about a time in a production Java service you designed or implemented where transaction boundary design became an issue. Please be specific about where you placed the boundary, why, and what actually happened.",
+   "context": "Early on, before any question has been asked, or right as the conversation moves into technical experience. This can be asked first, ahead of questions on other dimensions, as an opening question to see whether the candidate can talk about production Java experience and design reasoning.",
+   "options": null,
+   "rubric": [
+    "Cannot describe any experience dealing with transaction boundaries in a production Java service at all. Even when asked for an example, only personal study or tutorial-level material comes up, or the answer drifts into unrelated career history.",
+    "Has no experience making transaction boundary design decisions themselves. The answer stops at ‘the team decided’ or ‘a senior engineer designed it,’ and even when asked what part they were responsible for or what they considered, they cannot explain concretely. They claim Java experience, but the answer shows the design decisions were left to others.",
+    "Says they experienced a transaction boundary problem, but the reasoning stays at textbook generalities (‘for performance,’ ‘it's a best practice’), with no concrete numbers from their own service, real incident examples, or grounds for the decision. Technical names and terms are accurate, but nowhere does the answer show what the candidate themselves judged. Alternatively, they talk fluently about a successful design but cannot describe a single failure or later change.",
+    "Names a concrete transaction-boundary problem in a production Java service they were responsible for (e.g., lock contention on a long transaction, an external API call left inside a transaction, inconsistency from an isolation level), describes where they moved the boundary and the grounds for that decision (measurements, a real incident, data-consistency requirements), and covers the outcome or the fix for a failure, with numbers and time frames. Beyond just ‘we did it as a team,’ their own judgment and hands-on work are clear, and they can explain a design failure in their own words."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "java_ops",
+   "dimension": "Java backend practice",
+   "text": "Give an example from day-to-day operations — JVM GC tuning, connection pools, running Java on Kubernetes — where you personally worked hands-on to solve a problem. Tell me what you measured, what you changed, and what changed as a result.",
+   "context": "When the answer to java_tx_design covered design but hasn't yet shown real operational experience (measurement, tuning, incident response). Ask this when design talk is fluent but there's no operational backing behind it yet.",
+   "options": null,
+   "rubric": [
+    "Cannot describe any experience handling operational problems in a production environment. The answer stays at personal-project or study level, or drifts into unrelated career history.",
+    "Explains that JVM and Kubernetes operations were handled by other team members or SRE, so they only wrote code and were never directly involved in operational problems. Even when asked about their involvement in triage or measurement, they cannot describe concretely what logs they looked at or what action they took.",
+    "Says they've touched operational problems, but the response stays at generic phrases like ‘I tuned it’ or ‘I added monitoring,’ without saying what they measured or what grounds they changed things on. Many tool and term names come up, but no account of their own judgment or failures.",
+    "Names a concrete operational problem in a Java service they operated (e.g., latency degradation from GC pauses, connection pool exhaustion, an OOM on Kubernetes), and describes the measurement tools used, the numbers obtained, the changes tried, the results (with figures), and, if the first fix missed, the failure and the retry. Can explain the triage process in their own words, with grounds for the decisions rather than a list of tool names."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "rust_readiness",
+   "dimension": "Rust readiness",
+   "text": "Tell me about your experience and thinking on migrating from Java to Rust. If you have production Rust experience, tell me its scope; if not, tell me how you think you could realistically learn the differences from Java — ownership, lifetimes, async runtimes. Also tell me your thinking on how to decide a service boundary.",
+   "context": "After getting answers to the two Java practice questions, or right after the candidate mentions Rust in their self-introduction or work history. A follow-up question to ask once Java experience has been corroborated.",
+   "options": null,
+   "rubric": [
+    "Cannot speak to interest in or readiness for Rust at all. Substitutes talk of Java experience for the question, shows no interest in the topic of migration itself, or drifts into unrelated career history.",
+    "Has barely touched Rust and has no realistic outlook for learning it. Says they're ‘willing to learn,’ but cannot give a concrete plan for where to start or how long it would take to become production-ready. Cannot speak to boundary design for migration either.",
+    "Can describe Rust terminology accurately (ownership, lifetimes, tokio, etc.), but gives no real example of code they wrote or ran themselves. On migration too, the answer stays at generalities like ‘Rust should be adopted because it's safe and fast,’ without describing how to decide a boundary or what to measure as their own judgment. The explanation of the difference from Java reads like a summary of an introductory book, and the learning plan is no more than ‘I'll study it,’ with no realism visible.",
+    "If they have production Rust experience, they describe which part of production it was (e.g., why latency became an issue, how they cut the boundary with Java, the measurement results), with numbers and time frames, and can describe failures too. If they lack production experience, they explain the concrete differences from Java in ownership, lifetimes, and async runtimes in their own words, and describe a realistic learning plan (what they have already written, read, or been studying). In addition, they state a view that fits our approach — deciding a boundary and migrating while measuring, rather than a full rewrite — together with their own grounds for it."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "rust_boundary",
+   "dimension": "Rust readiness",
+   "text": "If you were to move part of the ledger write path to Rust, where would you start, where would you place the boundary with Java, and what would you measure before and after the migration to make that call? If you've cut out a language or service boundary before, please answer in light of that experience.",
+   "context": "After the candidate has spoken, in their rust_readiness answer, about their Rust experience or learning outlook. A deeper follow-up to check whether boundary design and migration judgment can be told as real experience.",
+   "options": null,
+   "rubric": [
+    "Cannot answer the question. Does not understand the topic of migration or boundaries at all, or drifts into unrelated talk.",
+    "Has no experience making boundary-design or migration decisions themselves, and even when pressed, gives nothing beyond reciting general principles. Cannot construct a concrete plan of their own for where to start.",
+    "Can describe a general direction for migration, but it stays at generalities (‘measurement matters first,’ ‘migrate in stages’), without describing the concrete boundary location, the metrics to watch, or the decision criteria in their own words. Even when citing past experience carving out a boundary, they can't distinguish what they decided from ‘what the team did,’ and no numbers or failures come up.",
+    "Concretely describes how to choose a migration target (measuring hot paths, starting with lower-risk parts), how to place the boundary (the shape of the interface, how to keep data consistent, coexisting with Java), and what metrics to watch before and after migration (latency, memory, correctness reconciliation), together with their own grounds for those decisions. If they've carved out a boundary before, they include the numbers, failures, and how they built agreement with the team. Fits our ‘decide the boundary before you rewrite’ approach, and can also describe how they resisted the temptation to do a full rewrite."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "money_correctness",
+   "dimension": "Money correctness and operational judgment",
+   "text": "Tell me concretely, as your own production implementation and operational experience, about handling idempotency, retries, and duplicate delivery. Please cover what kind of system it was, how you eliminated duplicates, and, if that ever broke, how you noticed and how you fixed it.",
+   "context": "Early to mid-interview. A core question, asked after Java or operational experience has come up, to see whether the candidate has experience with money correctness. Can be asked at any point after the technical-dimension questions.",
+   "options": null,
+   "rubric": [
+    "Cannot describe any hands-on experience handling idempotency, retries, or duplicate delivery. Even the conceptual explanation is inaccurate, or the answer drifts into unrelated career history.",
+    "Has no real example of duplication or a mismatch they personally handled; the answer stops at ‘the team handled it,’ and even when asked about their own role, they cannot explain concretely. Or, they cannot describe any experience handling a consistency mismatch at all.",
+    "Can accurately explain idempotency and retry terminology and general techniques, but gives no real example of the implementation choices in their own system, or of noticing and recovering from a break. Nothing more concrete than ‘basically, we used an idempotency key,’ with no grounds for the decision or account of failure told as their own experience.",
+    "Names the concrete mechanism they implemented and operated (idempotency-key design, store choice, duplicate-delivery detection, reconciliation mechanism), why they chose that design, and the process of noticing and recovering when an incident or duplication actually occurred, with numbers (scale, count, time taken) and time frames. If it was an experience of resolving a consistency mismatch, they can also describe the root-cause triage and the grounds for correcting it with a new journal entry or record rather than an overwrite."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "incident_response",
+   "dimension": "Money correctness and operational judgment",
+   "text": "Tell me about an incident that occurred in a system you operated. Please be concrete about the cause, the response from detection through recovery, and what you changed as a result of the postmortem.",
+   "context": "After the money_correctness answer, or right after the candidate mentions incident response. Asked once money-correctness experience has been confirmed, as a question that reveals both operational judgment and a ‘do not hide’ attitude.",
+   "options": null,
+   "rubric": [
+    "Cannot describe any incident-response experience at all. Or, speaks in a way that affirms hiding — for example, not considering it a problem that they failed to report an incident or delayed reporting it.",
+    "Has no experience with an incident in a system they themselves operated; the answer stays at what they heard or saw about an incident someone else handled. Cannot describe their own role concretely even when asked.",
+    "Describes an incident, but the timeline and numbers are vague; the account of cause and response is fluent, but the grounds for the decisions are not visible. The postmortem account is no more than ‘we did a retrospective,’ with no description of what actually changed or whether it worked. No sign of their own judgment about when or how to share the news.",
+    "Describes an incident in a system they operated, with a timeline and numbers (time from detection, time to recovery, number of affected cases). Explains, in their own words, what they looked at to triage the cause and the recovery decisions (including who they told and when), and can describe the postmortem's preventive measures and whether they actually worked afterward. If their own mistake caused it, they can describe, matter-of-factly, how they shared that without hiding it."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "process_skipping",
+   "dimension": "Alignment with how we work",
+   "text": "Have you ever, while responding to an urgent incident, felt tempted to skip review or the normal deployment procedure? Tell me what you actually did, and what you think would need to be in place to justify a decision to skip a step.",
+   "context": "After money correctness or incident response has come up. A question that checks alignment with the principle that every change goes through review and the deployment procedure, and any needed skip is announced and recorded. Natural to ask right after an incident-response story.",
+   "options": null,
+   "rubric": [
+    "Treats the operational process of review and deployment procedure itself as unimportant, does not answer the question seriously, or describes following the procedure as an obstacle.",
+    "Speaks approvingly of skipping the procedure in a situation with no real urgency, as proof of efficiency or skill. Or asserts a stance of ‘fixing the incident comes first, so the procedure is secondary,’ with no practice of announcing or recording the skip.",
+    "On skipping the procedure in an emergency, says in general terms that ‘the principle should be upheld,’ but has no real example of being forced to make that call themselves, and the answer stays theoretical. Or the answer stays at ‘it depends on the situation,’ without giving concrete criteria for where they personally would draw the line. Technically correct understanding, but with no experience behind it.",
+    "Names a concrete experience of being forced to choose between the procedure and an emergency, and describes what they actually did. If they skipped it, they describe the steps — announcing it beforehand, recording it afterward, and following up with the normal procedure once recovered — together with the criteria for that skip decision. If they didn't skip it, they describe why (not shipping a change they can't verify, money is not a test environment) and an alternative way to move quickly and safely without cutting the procedure. Either way, their own judgment and its outcome come through as a concrete example."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "hiding_and_oncall",
+   "dimension": "Alignment with how we work",
+   "text": "Tell me about a time you shared a mistake or a delay early, and about your experience with on-call, handling inquiries, or mentoring juniors. For both, please be concrete about what you yourself did.",
+   "context": "After the process_skipping answer, or in the middle of the interview and later, once the technical-dimension questions have been corroborated. A question that checks alignment with the principles ‘do not hide’ and ‘operations and support are equal work.’",
+   "options": null,
+   "rubric": [
+    "Cannot describe their own actions on any of sharing mistakes, on-call, support, or mentoring; responds to the question only with generalities or career history.",
+    "On sharing mistakes or delays, cites a real example of a delayed report while not considering it a problem, or expresses a stance of ‘reporting should be kept to a minimum.’ Or, states outright that on-call, handling inquiries, or mentoring juniors is not real development work.",
+    "Says they have experience sharing mistakes and doing on-call, but with no specifics — no more than ‘I reported it normally’ or ‘I did take on-call shifts’ — with no sign of their own judgment or effort. On mentoring juniors, they've never given it thought, or cannot describe any experience.",
+    "Can describe a concrete example of sharing their own mistake or delay before it got worse — what, when, to whom, how it was communicated, and what happened as a result. Also names a real example of taking on on-call rotation, inquiry handling, or mentoring juniors as their own job (duration, frequency, approach), and can describe never having thought of it as ‘not my real job.’ Both are told as their own actions, including experience of sharing within a blameless culture."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "evidence_decision",
+   "dimension": "Alignment with how we work",
+   "text": "Tell me about a time you disagreed with a team's technical decision. How did you voice the disagreement, how was it decided, and what did you do after the decision was made?",
+   "context": "After the other 'how we work' questions, or right after the candidate mentions a team implementation or rewrite. A question that checks alignment with ‘argue with evidence, then follow the decision’ and ‘decide the boundary before you rewrite.’",
+   "options": null,
+   "rubric": [
+    "Cannot describe any involvement in a team decision at all. Does not understand the question, or drifts into unrelated career history.",
+    "Speaks with pride about opposing a team's decision and then proceeding alone with an implementation or rewrite after the decision was made. Or has no experience of disagreeing at all, and the answer stays at something like ‘my technical judgment is usually right, so I've never clashed with anyone,’ with no experience of following a decision described.",
+    "Can describe voicing a disagreement, but the argument was based on feeling or preference rather than evidence, and they cannot describe what they did after the decision. The answer stops at ‘in the end, the team's approach won out,’ with nothing on how they accepted the decision and acted on it.",
+    "Names a concrete example of disagreeing, describes how they argued with evidence (measurements, experiment results, a past incident), how the decision came out of that argument, and how they followed the decision afterward (or how the decision changed). Can also describe not overturning it alone after the fact, or, if they nearly did, how they stopped themselves. If they've ever argued for a full rewrite out of technical preference, they can describe how they held that impulse in check."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "own_contribution",
+   "dimension": "Alignment with how we work",
+   "text": "I'd like to check something from your earlier answers where you used the phrase 'as a team.' Within that, which parts did you personally decide and do yourself? Please answer the same question again, using a different piece of experience.",
+   "context": "When earlier answers — to money_correctness, rust_boundary, evidence_decision, and the like — leaned noticeably on 'we did it as a team.' A follow-up asked later in the interview to pin down the candidate's own role.",
+   "options": null,
+   "rubric": [
+    "Refuses to separate out and describe their own contribution, or doesn't understand the question and drifts into unrelated talk.",
+    "'We did it as a team' stands in for an explanation of their own role, and even when pressed, they cannot describe concretely what they themselves did. Or, they exaggerate the scope of their own work, and lose specificity once the contradiction is exposed.",
+    "Tries to describe their own role, but the separation is vague, no more than 'I was mainly in charge of implementation.' Cannot describe the boundary between the decision-making part and the execution part, and the same degree of vagueness continues in a different piece of experience. Technical names are accurate, but no real example of the candidate's own judgment ever surfaces.",
+    "Names a concrete example from their earlier answers, and clearly separates the points they decided alone (a design choice, incident triage, deciding a migration boundary, etc.) from the points left to the team. Can explain, in their own words, the grounds for the decision and the part they did hands-on, and can do the same for a different piece of experience. Comes with numbers and time frames, so 'as a team' is described as an actual division of labor rather than a convenient phrase."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "java_recovery",
+   "dimension": "Java backend practice",
+   "text": "Tell me about a time you restored data consistency in a production Java service after an incident or a bug. What was broken, how did you pin down the scope, how did you fix it, and how did you confirm the fix worked?",
+   "context": "When java_tx_design and java_ops have surfaced design and operations experience, but not yet an experience of fixing broken data by hand. Natural to ask after an incident-response story.",
+   "options": null,
+   "rubric": [
+    "Cannot describe any experience restoring production data consistency at all. The answer stays at personal study, or drifts into unrelated career history.",
+    "Explains that restoring consistency was handled by a DBA or a different team, so they weren't involved. Even when asked about scoping or verification, they cannot describe concretely what they looked at or what they did.",
+    "Can correctly explain the recovery steps — scoping, fixing, verifying — as a general procedure, with accurate terminology, but gives no real example from their own service (how many cases, over what period, how they confirmed it). Fluent, but with no numbers or failures told as their own experience.",
+    "Names a concrete inconsistency in a production service they were responsible for (e.g., double counting, a missing journal entry, a batch job that stopped partway), and describes how they scoped the impact (query, count, time period), how they fixed it (a correcting record rather than an overwrite, a backfill), and how they verified the fix afterward (reconciliation, recalculation), with numbers. Can also describe it if their first read of the problem was wrong."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "java_perf_change",
+   "dimension": "Java backend practice",
+   "text": "Tell me about a time you improved latency or throughput in a production Java service based on measurement. Give me the before-and-after numbers, and if you tried something that didn't work, tell me that too.",
+   "context": "When Java practice experience has come up, but it isn't yet clear whether the candidate can make measurement-based decisions. Ask in place of, or as a supplement to, the java_ops question.",
+   "options": null,
+   "rubric": [
+    "Cannot describe any production performance-improvement experience at all. Stays at personal-project level, or drifts into unrelated talk.",
+    "The improvement was done by the team or other members; they were not directly involved in either the measurement or the change. Cannot describe concretely what they looked at to make the call, even when asked.",
+    "Can describe the general flow — 'we profiled it, added a cache, and it got faster' — but no before-and-after numbers, no measurement method, and no ineffective attempts come up. Many technique names, but the grounds for the decision are never told as the candidate's own experience.",
+    "Gives production numbers they measured themselves (p99, throughput, GC pause time, etc.) before and after, describes what grounds they chose which change on, and covers an ineffective attempt and what they learned from it. Also touches on any side effects of the improvement and how they made it reversible."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "rust_hands_on",
+   "dimension": "Rust readiness",
+   "text": "In Rust code you've actually written — production or a personal project, either is fine — tell me a spot where you got stuck on ownership, lifetimes, or async, and how you resolved it. If you haven't written any yet, just say so.",
+   "context": "After Rust experience or learning has come up in rust_readiness, when you want to confirm it's backed by actual code. Effective to ask right after they say they have production experience.",
+   "options": null,
+   "rubric": [
+    "Has never written Rust code and admits it, or substitutes talk of Java or unrelated career history for the question.",
+    "Says they have written some, but cannot describe where they got stuck or how they resolved it. The experience stays at 'I copied a tutorial,' and they cannot explain what they themselves came to understand about ownership or lifetimes.",
+    "Can explain ownership, the borrow checker, lifetimes, and async/await accurately, but gives no real example of where their own code failed to compile and how they fixed it. It reads like a reproduction of an introductory-book explanation, with no trace of the candidate's own hands-on work.",
+    "Names concretely what failed to compile in their own code (e.g., a borrow conflict, a lifetime annotation, a Send/Sync constraint, a tokio runtime boundary), how they fixed it, and how they came to understand the fix, in their own words. If it was production work, which part of production it was comes out concretely; if personal, what they built comes out concretely."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "rust_when_not",
+   "dimension": "Rust readiness",
+   "text": "We don't do full rewrites. What kind of part do you think should not be moved to Rust? If you've ever held back the urge to rewrite something and kept it in Java or an existing language, tell me about that too.",
+   "context": "Ask in place of rust_boundary, or after it. A question to check fit with our 'decide the boundary before you rewrite' approach when the candidate has spoken with strong enthusiasm for Rust.",
+   "options": null,
+   "rubric": [
+    "Cannot answer the question, or argues for a full rewrite — 'everything should be Rust' — as a technical preference, with no mention of measurement or agreement.",
+    "Can state a generality about what shouldn't be moved ('don't touch what's stable'), but cannot describe the decision criteria, and has no real example from their own experience.",
+    "Can correctly explain the decision criteria (change frequency, latency requirements, the team's familiarity, how easily a boundary can be cut, how migration is verified), but has no real example of making that call themselves, and the answer stays textbook.",
+    "Describes the criteria for deciding not to move something in their own words, and names a concrete experience of actually holding back the urge to rewrite — what, why, how they measured it, and how they reached agreement with the team. The grounds for separating what to migrate from what not to are based on measurement and agreement."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "reconciliation_mismatch",
+   "dimension": "Money correctness and operational judgment",
+   "text": "Tell me about a concrete incident where the numbers didn't match in settlement or reconciliation. What was off, by how much, how did you notice, what was the cause, and how did you correct it? Please also cover how you handled data after it was finalized.",
+   "context": "When money_correctness has surfaced idempotency talk, but not yet an experience of actually chasing down a numeric mismatch. Fine to ask early of a candidate who says they have experience with money-handling systems.",
+   "options": null,
+   "rubric": [
+    "Cannot describe any experience of chasing down a numeric mismatch at all. Even the explanation of the reconciliation concept is vague, or the answer drifts into unrelated career history.",
+    "Describes that a mismatch occurred, but someone else did the investigation, and they cannot explain their own role concretely even when asked. The cause and the fix end at 'it was handled.'",
+    "Can accurately explain the typical causes of reconciliation mismatches (time-zone boundaries, rounding, a late-arriving refund, a duplicate event) and the correction principle (a correcting entry, not an overwrite), but gives no real example they chased down themselves, with its numbers and the time it took.",
+    "Names a concrete mismatch they chased down themselves (the amount, the count, when they noticed), and describes the triage approach, the cause, the fix (e.g., correcting it with a new record rather than an overwrite once it was finalized), and the prevention of recurrence, with numbers and time frames. Can also describe a point where their initial read was wrong."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  },
+  {
+   "id": "prod_data_verification",
+   "dimension": "Money correctness and operational judgment",
+   "text": "Have you ever felt tempted to use production data or balances to check that something worked? What did you actually do in that situation? When something can't be reproduced in a test environment, how do you go about verifying it?",
+   "context": "After the money-correctness questions, or right after the candidate mentions checking or experimenting in production. A question that checks alignment with the principle 'money is not a test environment.'",
+   "options": null,
+   "rubric": [
+    "Does not consider it a problem to have verified something using production data or balances, or speaks approvingly of shipping a change they couldn't verify.",
+    "Has no experience of a situation where they wanted to check something in production, and cannot describe anything more concrete than 'I'd be careful' for what to do when something can't be reproduced in a test environment.",
+    "Can correctly explain the principle of not using production data and the alternatives (a masked copy, shadow execution, read-only comparison, staged rollout), but gives no real example of making that call themselves.",
+    "Names a concrete situation where they were tempted to check something in production, and describes the method they actually used (reproducing it on a masked copy, comparing via shadow execution, a read-only reconciliation, a canary), the grounds for that decision, and the cost it took. If they had no choice but to check in production, they can also describe how they announced it, recorded it, and limited the impact."
+   ],
+   "ui": "textarea",
+   "ui_options": [
+    "textarea",
+    "text"
+   ]
+  }
+ ],
+ "provisional": [
+  "measurement_boundary",
+  "noise_floor",
+  "samples",
+  "done_threshold",
+  "gap_k"
+ ],
+ "source": {
+  "model": "z-ai/glm-5.3-flash",
+  "brief_sha256": "a97d0f8bc4fc4786ca76903a41060a1bf3a41b78d630f0d65ea34187dc99f77d",
+  "note": "Generated by `--plan brief.md` with z-ai/glm-5.3-flash (second attempt; the first wrote done_threshold 1, out of bounds), then approved with these edits, applied by plans/approve_ja.py. (1) Every rubric came back best-first; the program reads level 0 as the worst, so each question's rubric and the fit rubric were reversed. The fit rubric was also reordered so that 'cannot be assessed' sits above 'irreconcilable conflict'. (2) per_dimension 1 -> 2, min_q 5 -> 8, max_q 8 -> 12, reserve_early 1 (unchanged): as written, coverage was met by the fourth answer and the budget ran to eight, so the judge chose almost nothing and `done` could not vary. Now 4 dimensions owe 8 answers, the budget is 12, and the pool is 16. (3) done_threshold 0.95 -> 0.5: the model's two attempts wrote 1 and then the bound's maximum, neither a considered number; 0.5 is the same provisional value the earlier 50-interview plan ran under. (4) Six questions added by the approver, written in the same style, so the pool exceeds the budget and some questions go unasked: two per technical dimension. A second generated draft failed validation twice and was not used. (5) ui text -> textarea, with text also allowed: these questions want prose. (6) One typo fixed in rust_readiness (聞かせます -> 聞かせてください). (7) done.true: 'at least once' -> 'at least twice', to match per_dimension. Nothing else was changed; dimension names and weights are the model's. The English plan is a translation of the approved Japanese plan made at approval time; ids, order, policy and rubric levels are identical."
+ }
+}
